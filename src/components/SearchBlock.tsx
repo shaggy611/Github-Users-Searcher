@@ -1,18 +1,14 @@
-// import Container from '@mui/material/Container'
 import TextField from '@mui/material/TextField/TextField'
 import { useState } from 'react'
 import Divider from '@mui/material/Divider'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
-// import { useActions } from '../hooks/useActions'
-// import { useDispatch } from 'react-redux'
 import { fetchGithubUsers } from '../store/actionCreator/users'
 import { useAppDispatch } from '../hooks/useTypedDispatch'
 
 const SearchBlock: React.FC = () => {
   const [userName, setUserName] = useState('')
-  // const { fetchGithubUsers } = useActions()
   const dispatch = useAppDispatch()
   
   return (

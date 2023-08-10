@@ -6,7 +6,7 @@ import { githubUserReceivedData } from '../types/users'
 
 const UserCard = () => {
   const state = useAppSelector((state) => state.githubUser)
-  const { user, loading, error }: { user: githubUserReceivedData } = state
+  const { user, loading, error }: { user: githubUserReceivedData, loading: boolean, error: string | null } = state
 
   console.log(user)
 
