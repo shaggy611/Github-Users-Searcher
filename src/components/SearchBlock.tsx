@@ -4,13 +4,12 @@ import Divider from '@mui/material/Divider'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
-import { fetchGithubUsers } from '../store/actionCreator/users'
-import { useAppDispatch } from '../hooks/useTypedDispatch'
+import { useActions } from './../hooks/useActions'
 
 const SearchBlock: React.FC = () => {
   const [userName, setUserName] = useState('')
-  const dispatch = useAppDispatch()
-  
+  const { fetchGithubUsers } = useActions()
+
   return (
     <>
       <Box pt={1} pb={1}>
@@ -33,7 +32,7 @@ const SearchBlock: React.FC = () => {
             variant='contained'
             sx={{ paddingLeft: '30px', paddingRight: '30px', height: '100%' }}
             onClick={() => {
-              dispatch(fetchGithubUsers(userName))
+              fetchGithubUsers(userName)
             }}>
             SEARCH
           </Button>

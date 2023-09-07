@@ -8,8 +8,6 @@ const UserCard = () => {
   const state = useAppSelector((state) => state.githubUser)
   const { user, loading, error }: { user: githubUserReceivedData, loading: boolean, error: string | null } = state
 
-  console.log(user)
-
   return (
     <>
       <h2>User info:</h2>
